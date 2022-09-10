@@ -39,9 +39,6 @@ contract Liquidity {
                 address(this),
                 block.timestamp
             );
-        emit Log("amountA", amountA);
-        emit Log("amountB", amountB);
-        emit Log("liquidity", liquidity);
     }
 
     function removeLiquidity(
@@ -65,8 +62,5 @@ contract Liquidity {
             address(this),
             block.timestamp
         );
-
-        emit Log("amountA", amountA);
-        emit Log("amountB", amountB);
     }
 }

@@ -19,10 +19,9 @@ contract Swap {
         IERC20(_tokenIn).approve(UNISWAP_V2_ROUTER, _amountIn);
 
         address[] memory path;
-        path = new address[](3);
+        path = new address[](2);
         path[0] = _tokenIn;
-        path[1] = WETH;
-        path[2] = _tokenOut;
+        path[1] = _tokenOut;
 
         IUniswapV2Router(UNISWAP_V2_ROUTER)
             .swapExactTokensForTokens(
